@@ -1,8 +1,7 @@
-export default function Botones() {
+export default function Botones({onclick, value}) {
     return(
-        <div id="div-botones">
-  <button onclick="reiniciarMarcadores()">REINICIAR MARCADORES</button>
-  <button onclick="cambiarNombre()">CAMBIAR NOMBRE</button>
-</div>
+        <button className="boton" onClick={onclick}>
+            {value}
+        </button>
     );
 }

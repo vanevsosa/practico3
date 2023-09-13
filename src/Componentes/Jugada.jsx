@@ -1,20 +1,65 @@
-export default function Jugada() {
-    return(
+import Botones from './Botones';
 
-<div id="div-jugada">
-  <p>Hacé click en una de las 3 opciones y después en JUGADA</p>
-  <div className="botones">
-    <button onclick="obtenerJugadaUsuario('piedra')">
-      <img src="piedra.png" width="100px" height="100px" title="Piedra" alt="Piedra"/>
-    </button>
-    <button onclick="obtenerJugadaUsuario('papel')">
-      <img src="papel.png" width="100px" height="100px" title="Papel" alt="Papel"/>
-    </button>
-    <button onclick="obtenerJugadaUsuario('tijera')">
-      <img src="tijera.png" width="100px" height="100px" title="Tijera" alt="Tijera"/>
-    </button>
-  </div>
-  <button onclick="jugada()">JUGADA</button>
-</div>
-    );
+export default function Jugada(props) {
+
+  let jugadaUsuario = props.jugadaUsuario;
+	let jugadaCompu = props.ronda.jugadaCompu;
+	let nombreUsuario = props.nombreUsuario;
+	let resultadoJugada = props.ronda.resultadoJugada;
+	let rondas = props.rondas;
+	let ganadosUsuario = props.ronda.ganadosUsuario;
+	let ganadosCompu = props.ronda.ganadosCompu;
+
+  function clickJugada(){
+    jugadaCompu = (["piedra", "papel", "tijera"] [Math.floor(Math.random() * 2.99)]);
+
+    switch(jugadaUsuario + jugadaCompu){
+      case "piedrapapel":
+        resultadoJugada = ('la compu');
+				ganadosCompu++;
+        break;
+
+      case "piedratijera":
+        resultadoJugada = ('vos');
+				ganadosUsuario++;
+        rondas++;
+        break;
+
+      case "papelpiedra":
+        resultadoJugada = ('vos');
+				ganadosUsuario++;
+        break;
+
+      case "papeltijera":
+        resultadoJugada = ('la compu');
+				ganadosCompu++;
+        break;
+
+      case "tijerapiedra":
+        resultadoJugada = ('ganó la compu');
+				ganadosCompu++;
+        break;
+
+      case "tijerapapel":
+        resultadoJugada = ('vos');
+				ganadosUsuario++;
+        break;
+
+      default:
+        resultadoJugada = ('empataron');
+  }
+
+       rondas = {
+			  jugadaCompu:(jugadaCompu), 
+			  resultadoJugada:(resultadoJugada), 
+			  ganadosUsuario:(ganadosUsuario),
+			  ganadosCompu:(ganadosCompu)
+		};
+
+    props.callback (rondas);
+    }
+
+    return(
+      <Botones value='JUGADA' onClick={clickJugada} />
+    ); 
 }

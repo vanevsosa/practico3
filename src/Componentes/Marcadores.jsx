@@ -1,12 +1,19 @@
-export default function Marcadores() {
+import compu from '../Images/compu.gif';
+import usuario from '../Images/usuario.gif';
+import vs from '../Images/versus- vs.jpg';
+
+export default function Marcadores(props) {
     return(
 
 <div className="marcadores">
-  <p id="marcador-usuario" />
-  <img className="img-1" src="usuario.gif" alt="usuario" width="140px" height="140px"/>
-  <img className="img-2" src="versus- vs.jpg" alt="VS" width="50px" height="50px"/>
-  <img className="img-3" src="compu.gif" alt="computadora" width="140px" height="140px"/>
-  <p id="marcador-compu" />
+
+    <img src={usuario} tamaño={140}/>
+    <p className="marcador-usuario">{props.nombre}: {props.ronda.ganadoUsuario}</p>
+    <img src={vs} tamaño={50}/>
+    <p className="marcador-compu">Compu: {props.ronda.ganadosCompu}</p>
+    <img src={compu} tamaño={140}/> 
+  
 </div>
-    );
+  );
 }
+    
