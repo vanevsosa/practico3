@@ -1,65 +1,76 @@
-import Botones from './Botones';
+import Boton from '../Components/Boton'
 
 export default function Jugada(props) {
 
   let jugadaUsuario = props.jugadaUsuario;
 	let jugadaCompu = props.ronda.jugadaCompu;
-	let nombreUsuario = props.nombreUsuario;
-	let resultadoJugada = props.ronda.resultadoJugada;
+	let resultado = props.ronda.resultado;
 	let rondas = props.rondas;
 	let ganadosUsuario = props.ronda.ganadosUsuario;
 	let ganadosCompu = props.ronda.ganadosCompu;
+  let resultadoFinal = props.ronda.resultadoFinal;
 
   function clickJugada(){
-    jugadaCompu = (["piedra", "papel", "tijera"] [Math.floor(Math.random() * 2.99)]);
+
+    if(jugadaUsuario === '') {
+      alert('ERROR, ELEGI TU JUGADA !');
+    } else {
+      jugadaCompu = (["piedra", "papel", "tijera"][Math.floor(Math.random() * 2.99)]);
 
     switch(jugadaUsuario + jugadaCompu){
       case "piedrapapel":
-        resultadoJugada = ('la compu');
-				ganadosCompu++;
+        resultado = ('ganó la compu');
+        ganadosCompu++;
         break;
 
       case "piedratijera":
-        resultadoJugada = ('vos');
-				ganadosUsuario++;
-        rondas++;
+        resultado = ('ganaste');
+        ganadosUsuario++;
         break;
 
       case "papelpiedra":
-        resultadoJugada = ('vos');
-				ganadosUsuario++;
+        resultado = ('ganaste');
+        ganadosUsuario++;
         break;
 
       case "papeltijera":
-        resultadoJugada = ('la compu');
-				ganadosCompu++;
+        resultado = ('ganó la compu');
+        ganadosCompu++;
         break;
 
       case "tijerapiedra":
-        resultadoJugada = ('ganó la compu');
-				ganadosCompu++;
+        resultado = ('ganó la compu');
+        ganadosCompu++;
         break;
 
       case "tijerapapel":
-        resultadoJugada = ('vos');
-				ganadosUsuario++;
+        resultado = ('ganaste');
+        ganadosUsuario++;
         break;
 
       default:
-        resultadoJugada = ('empataron');
-  }
+        resultado = ("es EMPATE , se vuelve a jugar");
+    }
+
+    if(ganadosUsuario === 3){
+      resultadoFinal = (`JUEGO FINALIZADO, GANASTE !`);
+    } else if(ganadosCompu === 3){
+      resultadoFinal = ('JUEGO FINALIZADO, GANÓ LA COMPU !');
+    }  
 
        rondas = {
 			  jugadaCompu:(jugadaCompu), 
-			  resultadoJugada:(resultadoJugada), 
+			  resultado:(resultado), 
 			  ganadosUsuario:(ganadosUsuario),
-			  ganadosCompu:(ganadosCompu)
+			  ganadosCompu:(ganadosCompu),
+        resultadoFinal:(resultadoFinal)
 		};
 
-    props.callback (rondas);
+    props.callback (rondas, false);
     }
+  }
 
     return(
-      <Botones value='JUGADA' onClick={clickJugada} />
+      <Boton value='JUGADA' onClick={clickJugada} />
     ); 
 }

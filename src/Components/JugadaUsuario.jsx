@@ -4,6 +4,7 @@ import tijera from '../Images/tijera.png';
 import BotonConImg from './BotonConImg';
 
 export default function JugadaUsuario(props) {
+
     function piedraClick() {
         props.callback('piedra');
     }
@@ -17,13 +18,14 @@ export default function JugadaUsuario(props) {
     }
 
     return (
-        <div className="jugada-usuario">
+        <div className="jugada-usuario-contenedor">
 
             <p>Hacé click en una de las 3 opciones y después en JUGADA</p>
 
             <BotonConImg imagen={piedra} tamaño={100} onClick={piedraClick} />
             <BotonConImg imagen={papel} tamaño={100} onClick={papelClick} />
             <BotonConImg imagen={tijera} tamaño={100} onClick={tijeraClick} />
+
         </div>
     );
 }

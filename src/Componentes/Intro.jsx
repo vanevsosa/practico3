@@ -1,8 +1,18 @@
-export default function Intro() {
+import Boton from '../Components/Boton';
+
+export default function Intro(props) {
+
+  function clickAjugar() {
+
+    let mostrar = false;
+    props.callback(mostrar);
+  }
     return(
 
-<div id="div-a-jugar">
-  <button onclick="aJugar()">A JUGAR !</button>
+      <div className="intro-contenedor">
+
+      <Boton value='A JUGAR !' onclick={clickAjugar} />
+
 </div>
-    );
+  );
 }
