@@ -1,29 +1,25 @@
-import Boton from '../Components/Boton';
+import React from "react";
 
-export default function Form(props) {
-    
-    function clickEnviar() {
+export default function Form(props){
 
-      let nombre= document.getElementById("user-name").value;
-
+    function agregarNombre(){
+  
+      let nombre = document.getElementById("user-name").value;
+  
       if(nombre ===''){
         alert('ERROR, INGRESA UN NOMBRE')
       } else {
         props.callback(nombre, false);
       }
+  
     }
   
-    return(
-        <div className="form-contenedor">
-
-            <p>Ingresá tu NOMBRE y hacé click en ENVIAR</p>
-
-            <input type='text' id="user-name" />
-            
-            <Boton value='ENVIAR' onClick={clickEnviar} />
-            
+      return (
+          <div classname="form-contenedor">
+            <h3>Ingresá tu nombre y hacé click en ENVIAR</h3>
+            <input type="text" id="user-name" />
+            <button onClick={agregarNombre}>ENVIAR</button>
   
-</div>
-    );
-}
-
+          </div>
+      );
+  }

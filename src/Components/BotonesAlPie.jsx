@@ -1,4 +1,4 @@
-import Boton from '../Components/Boton';
+
 
 export default function BotonesAlPie(props) {
 
@@ -17,8 +17,8 @@ export default function BotonesAlPie(props) {
     return(
         <div className='botones-al-pie-contenedor'>
 
-            <Boton value='REINICIAR MARCADORES' onClick={reiniciarMarcadores} />
-            <Boton value='CAMBIAR NOMBRE' onClick={cambiarNombre} />
+            <button onClick={reiniciarMarcadores}>REINICIAR MARCADORES</button>
+            <button onClick={cambiarNombre}>CAMBIAR NOMBRE</button>
         </div>
     );
 }

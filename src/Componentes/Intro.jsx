@@ -1,8 +1,8 @@
-import Boton from '../Components/Boton';
+import React from "react";
 
 export default function Intro(props) {
 
-  function clickAjugar() {
+  function aJugar() {
 
     let mostrar = false;
     props.callback(mostrar);
@@ -11,7 +11,7 @@ export default function Intro(props) {
 
       <div className="intro-contenedor">
 
-      <Boton value='A JUGAR !' onclick={clickAjugar} />
+      <button onClick={aJugar}>A JUGAR !</button>
 
 </div>
   );

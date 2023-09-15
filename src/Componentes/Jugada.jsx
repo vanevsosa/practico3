@@ -1,16 +1,16 @@
-import Boton from '../Components/Boton'
+import React from "react";
 
 export default function Jugada(props) {
 
   let jugadaUsuario = props.jugadaUsuario;
-	let jugadaCompu = props.ronda.jugadaCompu;
-	let resultado = props.ronda.resultado;
+	let jugadaCompu = props.rondas.jugadaCompu;
+	let resultado = props.rondas.resultado;
 	let rondas = props.rondas;
-	let ganadosUsuario = props.ronda.ganadosUsuario;
-	let ganadosCompu = props.ronda.ganadosCompu;
-  let resultadoFinal = props.ronda.resultadoFinal;
+	let ganadosUsuario = props.rondas.ganadosUsuario;
+	let ganadosCompu = props.rondas.ganadosCompu;
+  let resultadoFinal = props.rondas.resultadoFinal;
 
-  function clickJugada(){
+  function jugada(){
 
     if(jugadaUsuario === '') {
       alert('ERROR, ELEGI TU JUGADA !');
@@ -71,6 +71,6 @@ export default function Jugada(props) {
   }
 
     return(
-      <Boton value='JUGADA' onClick={clickJugada} />
+      <button onClick={jugada}>JUGADA</button>
     ); 
-}
+    }

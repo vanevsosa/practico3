@@ -1,7 +1,10 @@
-export default function Boton({onclick, value}) {
+import React from "react";
+
+export default function boton({ onClick, value }) {
     return(
-        <button className="boton" onClick={onclick}>
-            {value}
-        </button>
+      <button className="boton" onClick={onClick}>
+        {value}
+      </button>
+      
     );
-}
+  }
