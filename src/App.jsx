@@ -10,10 +10,13 @@ import Jugada from './Componentes/Jugada';
 
 function App() {
 
+  /* useState para nombre del jugador*/
   let [nombre, setNombre] = useState('');
 
+  /* Para la opción de jugada*/
   let [jugadaUsuario, setJugadaUsuario] = useState('');
 
+  /* Para actualizar cada ronda*/
   let [rondas, setRondas] = useState({
     jugadaCompu:'',
     resultado:'',
@@ -21,9 +24,11 @@ function App() {
     ganadosCompu:'0',
     resultadoFinal:'(gana quien sume 3 puntos)'
     });
-
+  
+  /* Para mostrar y ocultar componentes*/
   let [mostrarIntro, setMostrarIntro] = useState(true);
-
+  
+  /* Con estas funciones actualizo estado de mostrar/ocultar*/
   function manejarIntro(mostrar){
     setMostrarIntro(mostrar);
    
@@ -31,6 +36,7 @@ function App() {
 
   let [mostrarForm, setMostrarForm] = useState(true);
 
+  /* Se actualiza el nombre del jugador*/
   function manejarForm(nombre, mostrar){
     setNombre(nombre);
     setMostrarForm(mostrar);
@@ -38,16 +44,19 @@ function App() {
 
   let [mostrarJugada, setMostrarJugada] = useState(true);
 
+  /* Actualiza los marcadores después de cada ronda*/
   function manejarRondas(rondas, mostrar){
     setRondas(rondas);
     setMostrarJugada(mostrar);
   }
 
+  /* Habilita al jugador la siguiente ronda*/
   function manejarSiguiente(jU, mostrar){
     setJugadaUsuario(jU);
     setMostrarJugada(mostrar);
   }
   
+  /* Para el manejo de los botones reinicio y cambiar nombre*/
   function manejarBotones(boton) {
     if(boton ==='REINICIAR MARCADORES') {
       setJugadaUsuario('');

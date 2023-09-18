@@ -1,0 +1,23 @@
+button{
+    margin: 10px;
+    background-color: violet;
+    border-radius: 10px;
+    box-shadow: 0 9px #aaa;
+    background-position: center;
+    background-size: cover;
+    font-weight: bold;
+    font-size: large;
+}
+
+button:hover {
+    scale: 140%;
+    transition: 500ms;
+    cursor: pointer;    
+}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    animation: rotate-scale-up 0.65s linear both;
+}
+

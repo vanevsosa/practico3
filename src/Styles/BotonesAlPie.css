@@ -1,0 +1,11 @@
+.botones-al-pie-contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    font-size: medium;
+    border-radius: 10px;
+    margin-right: 20px;
+  }

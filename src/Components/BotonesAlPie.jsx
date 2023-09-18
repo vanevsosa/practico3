@@ -1,7 +1,9 @@
-
+import '../Styles/BotonesAlPie.css';
 
 export default function BotonesAlPie(props) {
 
+    /* Función dividida en dos funcionalidades (1 por botón) y una función que toma la opción y la saca 
+    por props*/
     function reiniciarMarcadores() {
         manejarBotones('REINICIAR MARCADORES');
     }

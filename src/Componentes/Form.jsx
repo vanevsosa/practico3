@@ -1,7 +1,9 @@
 import React from "react";
+import '../Styles/Form.css';
 
 export default function Form(props){
 
+    /* Para el ingreso del nombre de usuario se por id y después se extrae a través de props.callback */
     function agregarNombre(){
   
       let nombre = document.getElementById("user-name").value;

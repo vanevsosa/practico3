@@ -1,5 +1,7 @@
 import React from "react";
 
+/* Contiene todas las acciones que generan las rondas, a través de props obtiene todos los datos y luego
+los devuelve actualizados */
 export default function Jugada(props) {
 
   let jugadaUsuario = props.jugadaUsuario;

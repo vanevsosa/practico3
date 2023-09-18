@@ -1,0 +1,17 @@
+.marcadores {
+    font-size: medium;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    max-width: 100%;
+}
+
+.marcadores-contenedor {
+  margin-right: 20px;
+  max-width: 100%;
+  display: flex;
+}
+

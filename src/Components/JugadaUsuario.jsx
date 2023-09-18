@@ -3,6 +3,9 @@ import papel from '../Images/papel.png';
 import tijera from '../Images/tijera.png';
 import BotonConImg from './BotonConImg';
 
+
+/* Se agrupan las 3 opciones de jugada para el jugador, utilizo 1 función para cada opción que saca por 
+props la elegida*/
 export default function JugadaUsuario(props) {
 
     function piedraClick() {

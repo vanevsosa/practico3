@@ -1,5 +1,8 @@
 import React from "react";
+import '../Styles/Resultados.css';
 
+/* Se encarga de mostrar el resultado de cada ronda, y anuncia el ganador cuando finaliza el juego. Tiene un
+botón que que habilita la siguiente ronda a menos que haya finalizado, entonces muestra un alert*/
 export default function Resultados(props) {
 
     function siguiente() {
