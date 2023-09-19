@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Título del Proyecto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_**Piedra, Papel o Tijera en REACT**_
 
-## Available Scripts
+Este proyecto consta en crear un juego web simple utilizando HTML5, CSS y JavaScript que permita a los usuarios realizar una partida contra la PC. 
 
-In the project directory, you can run:
+## Comenzando 🚀
+Dentro del marco de _**Argentina Programa 4.0**_, en el curso de **"Programación Web Front-End" <Páginas Web con Componentes Dinámicos>**, dictado por _**FAMAF**_ (Facultad de Matemáticas, Astronomía, Física y Computación) de la UNC (Universidad Nacional de Córdoba), este es el Práctico N° 3.
 
-### `npm start`
+Para visualizar el juego creado sólo se necesita tener acceso a un navegador web. Dicho juego consta de tres archivos para su creación: index.html, script.js y styles.css
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Pre-requisitos 📋
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+No es necesario hacer ninguna instalación previa de ningún software para poder correr este programa, sólo con abrirlo en una página web es suficiente.
+Para la escritura del código utilizado se usó el programa Visual Studio Code.
 
-### `npm test`
+### Características del Programa 📟
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Piedra, papel o tijera es el clásico juego de manos para 2 oponentes. En este caso nuestro rival es La Compu, que genera su jugada aleatoriamente en cada ronda.
 
-### `npm run build`
+Primero debemos hacer click en el botón a jugar! y después ingresar obligatoriamente nuestro nombre de usuario y luego seleccionamos la opción Enviar. Después debemos elegir una de las 3 opciones y al clickear el botón de jugada el sistema nos dará el resultado de la ronda.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Las victorias de cada ronda se van sumando y quien logre 3 será quien gane el juego. En caso de empate no se suman puntos y se vuelve a jugar la ronda. Al finalizar el juego se reinicia clickeando reiniciar marcadores. También se puede cambiar el nombre del usuario.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Ejecutando las pruebas ⚙️
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Se prueba el juego con diferentes combinaciones de opciones y omiciones para comprobar que funcionan correctamente las funciones y alertas de errores.
 
-### `npm run eject`
+Se realizaron correcciones y ajustes necesarios para solucionar errores y comportamientos inesperados. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+A través de la interfaz del usuario se podrán enviar mensajes de advertencias o errores.
+* Si el usuario no ingresó ningun nombre o solo ingresó espacio en blanco y presiona el botón "ENVIAR" se envia el siguiente mensaje por consola : "Error, ingresá un nombre"
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Estilo del CSS ⌨️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Paleta de colores usadas de las opciones automáticas que arroja la pc y de distintas páginas web
+* Imagen de los elementos de piedra, papel o tijera, sacada de la web (https://www.pngwing.com/es/)
+* Imagen de los gif de usuario y pc , sacada de la web (https://gifer.com/es)
+* Imagen del símbolo vs, sacado de la web (https://www.freepik.es/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Construido con 🛠️
 
-## Learn More
+Utilicé el lenguaje _**REACT, CSS y JAVASCRIPT**_.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* ChatGTP para preguntas de etiquetado, estilos y forma de armar el cuerpo (Body) del HTML
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* https://www.w3schools.com/ para reforzar funcionamiento del código 
 
-### Code Splitting
+* https://www.freecodecamp.org/ para reforzar funcionamiento del código
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Autores ✒️
 
-### Analyzing the Bundle Size
+* **Vanesa Sosa** - (https://github.com/vanevsosa/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Licencia 📄
 
-### Making a Progressive Web App
+Código libre
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![](/public/piedra,papel%20o%20tijera.png)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

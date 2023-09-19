@@ -16,7 +16,7 @@ export default function Resultados(props) {
     return(
         <div className="resultados-contenedor">
 
-            <h2>El usuario eligió {props.jugadaUsuario}, la compu 
+            <h2>Elegiste {props.jugadaUsuario}, la compu 
             eligió {props.rondas.jugadaCompu}, {props.rondas.resultado}</h2>
 
             <h2>{props.rondas.resultadoFinal}</h2>

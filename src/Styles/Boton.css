@@ -1,5 +1,5 @@
-button{
-    margin: 10px;
+.button {
+    margin: 0 10px;
     background-color: violet;
     border-radius: 10px;
     box-shadow: 0 9px #aaa;
@@ -7,17 +7,11 @@ button{
     background-size: cover;
     font-weight: bold;
     font-size: large;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
-button:hover {
-    scale: 140%;
-    transition: 500ms;
-    cursor: pointer;    
-}
-
-button:active {
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-    animation: rotate-scale-up 0.65s linear both;
+.button:hover {
+    background-color: #0056b3;
 }
 

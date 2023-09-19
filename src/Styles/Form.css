@@ -1,12 +1,33 @@
 .form-contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .form-contenedor>h2 {
-    margin: 10px;
-  }
+    text-align: center;
+    padding: 20px;
+}
+
+.form-contenedor>h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.form-contenedor input[type="text"] {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-contenedor button {
+    background-color: violet;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 9px #aaa;
+}
+
+.form-contenedor button:hover {
+    background-color: #0056b3;
+    border-radius: 10px;
+    transform: scale(1.4);
+    transition: 500ms;
+    cursor: pointer;
+}
 
   
