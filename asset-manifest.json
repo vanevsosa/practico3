@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/practico3/static/css/main.cf511d01.css",
-    "main.js": "/practico3/static/js/main.4c9c5c08.js",
+    "main.css": "/practico3/static/css/main.029daac6.css",
+    "main.js": "/practico3/static/js/main.cc5ceacb.js",
     "static/js/787.f9640105.chunk.js": "/practico3/static/js/787.f9640105.chunk.js",
     "static/media/usuario.gif": "/practico3/static/media/usuario.ce3936aed4e71e51ed45.gif",
     "static/media/fondo.jpg": "/practico3/static/media/fondo.b9c0f2ebb7b55cd5066d.jpg",
@@ -11,12 +11,12 @@
     "static/media/tijera.png": "/practico3/static/media/tijera.0708a2771bcf4eb663e5.png",
     "static/media/piedra.png": "/practico3/static/media/piedra.76e378e65fd3dee1dc6f.png",
     "index.html": "/practico3/index.html",
-    "main.cf511d01.css.map": "/practico3/static/css/main.cf511d01.css.map",
-    "main.4c9c5c08.js.map": "/practico3/static/js/main.4c9c5c08.js.map",
+    "main.029daac6.css.map": "/practico3/static/css/main.029daac6.css.map",
+    "main.cc5ceacb.js.map": "/practico3/static/js/main.cc5ceacb.js.map",
     "787.f9640105.chunk.js.map": "/practico3/static/js/787.f9640105.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf511d01.css",
-    "static/js/main.4c9c5c08.js"
+    "static/css/main.029daac6.css",
+    "static/js/main.cc5ceacb.js"
   ]
 }
